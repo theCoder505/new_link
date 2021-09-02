@@ -1,0 +1,1070 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Google Font-->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,100;1,300;1,400&display=swap" rel="stylesheet">
+    <!-- custom css-->
+    <link rel="stylesheet" href="new_trial.css">
+    <title>Form</title>
+</head>
+
+<body>
+
+
+
+    <!--header start-->
+    <div class="container mt-4" id="header">
+        <div class="row">
+            <div class="col-12 col-md-4 text-center text-md-start">
+                <a class="navbar-brand" href="#">
+                    <img class="main-logo" src="../../assets/img/logo-cbs.png" alt="logo-cbs">
+                </a>
+            </div>
+
+            <div class="col-12 col-md-8 text-center text-md-end text-lg-end mt-md-4 mt-0">
+                <div class="btn-language">
+                    <button onclick="window.location.href='form1FR.php'">Français </button>
+                    <button onClick="window.print()">Print Form</button>
+                    <button onclick="window.location.href='../../logout.php'">LOGOUT</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--header end-->
+
+
+    <form method="post" autocomplete='off' action="" id="regForm" onsubmit="validate()">
+        <div class="tab testbox">
+            <div id="form1">
+                <section class="mt-5">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12 col-md-6 text-center text-md-start mb-2 mb-md-0">
+                                <img src="../../assets/img/logo-mintz.jpg" width="140px" height="70px" alt="logo-mintz">
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <h6 class="text-center text-md-end">
+                                    CRIMINAL RECORD VERIFICATION</br>
+                                    Informed Consent Form
+                                </h6>
+                            </div>
+                        </div>
+
+                        <div class="container">
+                            <div class="row mt-3">
+
+                                <table class="table table-style border_dark_table">
+                                    <thead class="tHead">
+                                        <tr>
+                                            <th colspan="2">
+                                                A. Personal Information
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="fixFullWidth">
+                                                    <div class="surNameWidth">
+                                                        <label for="surName">Surname (last name):<span>*</span></label>
+                                                    </div>
+                                                    <div class="inputFullWith"><input class="surNameInput" type="text" name="surName" oninput="this.className = ''" required="" />
+                                                    </div>
+                                                </div>
+                                            </td>
+
+                                            <td>
+                                                <div class="fixFullWidth">
+                                                    <div class="givenNameWidth">
+                                                        <label for="givenName">Given names(s)<span>:</span></label>
+                                                    </div>
+
+                                                    <div class="inputFullWith">
+                                                        <input class="givenNameInput" type="text" name="givenName" oninput="this.className = ''" required="" />
+                                                    </div>
+
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+
+                                            <tr>
+                                                <td>
+
+                                                    <div class="fixFullWidth">
+                                                        <div class="birthNameWidth">
+                                                            <label for="birthName">Surname (last name) at birth<span>:</span></label>
+                                                        </div>
+
+                                                        <div class="inputFullWith">
+                                                            <input class="birthNameInput" id="birthName" type="text" name="birthName" oninput="this.className = ''" required="" />
+                                                        </div>
+                                                    </div>
+
+
+                                                </td>
+                                                <td>
+
+                                                    <div class="fixFullWidth">
+                                                        <div class="formerNameWidth">
+                                                            <label for="formerName">Former name(s)<span>:</span></label>
+                                                        </div>
+
+                                                        <div class="inputFullWith">
+                                                            <input class="formerNameInput" id="formerName" type="text" name="formerName" oninput="this.className = ''" required="" />
+                                                        </div>
+                                                    </div>
+
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td colspan="2">
+
+                                                    <div class="fixFullWidth">
+                                                        <div class="placeBirthWidth">
+                                                            <label for="placeBirth">Place of birth (City/State, Country)<span>:</span></label>
+                                                        </div>
+
+                                                        <div class="inputFullWith">
+                                                            <input class="placeBirthInput" id="placeBirth" type="text" name="placeBirth" oninput="this.className = ''" required="" />
+                                                        </div>
+                                                    </div>
+
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>
+
+                                                    <div class="fixFullWidth">
+                                                        <div class="dobWith">
+                                                            <label for="dob">Date of Birth (YYYY-MM-DD)<span>:</span></label>
+                                                        </div>
+
+                                                        <div class="inputFullWith">
+                                                            <input id="dob" type="text" data-date-inline-picker="true" name="dob" oninput="this.className = ''" required="" />
+                                                        </div>
+                                                    </div>
+
+
+
+                                                </td>
+                                                <td>
+                                                    <label>Sex (check one)<span>:</span></label>
+                                                    <input style="width: 2%;" class="ms-3 ms-lg-5" type="radio" value="female" id="female" name="gender" />
+                                                    <label for="female"><span>Female</span></label>
+                                                    <input style="width: 2%; margin-left: 5px;" type="radio" value="male" id="male" name="gender" oninput="this.className = ''" required="" />
+                                                    <label for="male"><span>Male</span></label>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>
+
+                                                    <div class="fixFullWidth">
+                                                        <div class="phoneWith">
+                                                            <label for="phone">Phone number(s)<span>:</span></label>
+                                                        </div>
+
+                                                        <div class="inputFullWith">
+                                                            <input class="phoneInput" type="tel" id="phone" name="phone" pattern="^\(?(\d{3})\)?[-\.\s]?(\d{3})[-\.\s]?(\d{4})" oninput="this.className = ''" required="" />
+                                                        </div>
+                                                    </div>
+
+                                                </td>
+                                                <td>
+
+                                                    <div class="fixFullWidth">
+                                                        <div class="emailWith">
+                                                            <label for="email">Email address<span>:</span></label>
+                                                        </div>
+
+                                                        <div class="inputFullWith">
+                                                            <input class="emailInput" id="email" type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" oninput="this.className = ''" required="" />
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+
+                                            <tr>
+                                                <td colspan="2">
+                                                    <p>
+                                                        Current Home Address
+                                                    </p>
+                                                    <div class="row" id="specPrintBtmLine">
+
+                                                        <div class="col-12 col-md-4 mb-3 col-lg-2">
+                                                            <input style="border-bottom: 1px solid; width: 100%;" id="homeNumber" type="text" name="homeNumber" oninput="this.className= ''" required="" />
+                                                            <label for="homeNumber">Number </label>
+                                                        </div>
+
+                                                        <div class="col-12 col-md-4 mb-3 col-lg-2">
+                                                            <input style="border-bottom: 1px solid; width: 100%;" id="streetNumber" type="text" name="streetNumber" oninput="this.className= ''" required="" />
+                                                            <label for="streetNumber">Street </label>
+                                                        </div>
+
+                                                        <div class="col-12 col-md-4 mb-3 col-lg-2">
+                                                            <input style="border-bottom: 1px solid; width: 100%;" id="apartmentNumber" type="text" name="apartmentNumber" oninput="this.className = ''" required="" />
+                                                            <label for="apartmentNumber">Apartment</label>
+                                                        </div>
+
+                                                        <div class="col-12 col-md-4 mb-3 col-lg-1">
+                                                            <input style="border-bottom: 1px solid; width: 100%;" type="text" name="city" oninput="this.className = ''" required="" />
+                                                            <label for="city">City</label>
+                                                        </div>
+
+                                                        <div class="col-12 col-md-4 mb-3 col-lg-3">
+                                                            <input style="border-bottom: 1px solid; width: 100%;" id="province" type="text" name="province" oninput="this.className = ''" required="" />
+                                                            <label for="province">Province/Territory/State</label>
+                                                        </div>
+
+
+                                                        <div class="col-12 col-md-4 mb-3 col-lg-2">
+                                                            <input style="border-bottom: 1px solid; width: 100%;" id="zip" type="text" name="zip" oninput="this.className = ''" required="" />
+                                                            <label for="zip">Postal/Zip Code</label>
+                                                        </div>
+
+
+                                                        <div class="mt-3">
+                                                            <p>
+                                                                Previous Address(es) Within the Last 5 Years (attach additional page if necessary)
+                                                            </p>
+                                                        </div>
+                                                    </div>
+
+
+                                                    <div class="row" id="specPrintBtmLine">
+
+                                                        <div class="col-12 mt-3 col-md-4 col-lg-2">
+                                                            <input style="border-bottom: 1px solid; width: 100%;" id="previousHomeNumber1" type="text" name="previousHomeNumber1" oninput="this.className= ''" required="" />
+                                                        </div>
+
+                                                        <div class="col-12 mt-3 col-md-4 col-lg-2">
+                                                            <input style="border-bottom: 1px solid; width: 100%;" id="previousStreetNumber1" type="text" name="previousStreetNumber1" oninput="this.className= ''" required="" />
+                                                        </div>
+
+                                                        <div class="col-12 mt-3 col-md-4 col-lg-2">
+                                                            <input style="border-bottom: 1px solid; width: 100%;" id="PreviousApartmentNumber1" type="text" name="PreviousApartmentNumber1" oninput="this.className = ''" required="" />
+                                                        </div>
+
+                                                        <div class="col-12 mt-3 col-md-4 col-lg-1">
+                                                            <input style="border-bottom: 1px solid; width: 100%;" type="text" name="previousCity1" oninput="this.className = ''" required="" />
+                                                        </div>
+
+                                                        <div class="col-12 mt-3 col-md-4 col-lg-3">
+                                                            <input style="border-bottom: 1px solid; width: 100%;" id="previousProvince1" type="text" name="previousProvince1" oninput="this.className = ''" required="" />
+                                                        </div>
+
+
+                                                        <div class="col-12 mt-3 col-md-4 col-lg-2">
+                                                            <input style="border-bottom: 1px solid; width: 100%;" id="previousZip1" type="text" name="previousZip1" oninput="this.className = ''" required="" />
+                                                        </div>
+                                                    </div>
+
+
+                                                    <div class="row my-md-5 cstmBottom my-lg-3 printSpace" id="specPrintBtmLine">
+
+                                                        <div class="col-12 mt-3 col-md-4 col-lg-2">
+                                                            <input style="border-bottom: 1px solid; width: 100%;" id="previousHomeNumber2" type="text" name="previousHomeNumber2" oninput="this.className= ''" required="" />
+                                                        </div>
+
+                                                        <div class="col-12 mt-3 col-md-4 col-lg-2">
+                                                            <input style="border-bottom: 1px solid; width: 100%;" id="previousStreetNumber2" type="text" name="previousStreetNumber2" oninput="this.className= ''" required="" />
+                                                        </div>
+
+                                                        <div class="col-12 mt-3 col-md-4 col-lg-2">
+                                                            <input style="border-bottom: 1px solid; width: 100%;" id="PreviousApartmentNumber2" type="text" name="PreviousApartmentNumber2" oninput="this.className = ''" required="" />
+                                                        </div>
+
+                                                        <div class="col-12 mt-3 col-md-4 col-lg-1">
+                                                            <input style="border-bottom: 1px solid; width: 100%;" type="text" name="previousCity2" oninput="this.className = ''" required="" />
+                                                        </div>
+
+                                                        <div class="col-12 mt-3 col-md-4 col-lg-3">
+                                                            <input style="border-bottom: 1px solid; width: 100%;" id="previousProvince2" type="text" name="previousProvince2" oninput="this.className = ''" required="" />
+                                                        </div>
+
+
+                                                        <div class="col-12 mt-3 col-md-4 col-lg-2">
+                                                            <input style="border-bottom: 1px solid; width: 100%;" id="previousZip2" type="text" name="previousZip2" oninput="this.className = ''" required="" />
+                                                        </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr class="tHead">
+                                                <th colspan="2">
+                                                    B. Reason for the Criminal Record Verification
+                                                </th>
+                                            </tr>
+
+                                            <tr>
+                                                <td colspan="2">
+
+                                                    <div class="fixFullWidth">
+                                                        <div class="jobTitleWith">
+                                                            <label for="jobTitle">Reason for Request (example: Employment – Employer – Job Title):</label>
+                                                        </div>
+
+                                                        <div class="inputFullWith">
+                                                            <input class="jobTitleInput" id="jobTitle" placeholder="Due Diligence" type="text" name="jobTitle" oninput="this.className = ''" required="" />
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td colspan="2">
+
+                                                    <div class="fixFullWidth">
+                                                        <div class="eVerifileWith">
+                                                            <label for="eVerifile">Organization Requesting Search:</label>
+                                                        </div>
+
+                                                        <div class="inputFullWith">
+                                                            <input class="eVerifileInput" id="eVerifile" type="text" name="eVerifile" placeholder="EVERIFILE" oninput="this.className = ''" required="" />
+                                                        </div>
+                                                    </div>
+
+
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>
+
+                                                    <div class="fixFullWidth">
+                                                        <div class="contactNumberWidth">
+                                                            <label for="contactNumber">Contact Name: </label>
+                                                        </div>
+
+                                                        <div class="inputFullWith">
+                                                            <input class="contactNumberInput" type="text" placeholder=" CUSTOMER SUPPORT" id="contactNumber" name="contactNumber" oninput="this.className = ''" required="" />
+                                                        </div>
+                                                    </div>
+
+
+
+                                                </td>
+                                                <td>
+
+                                                    <div class="fixFullWidth">
+                                                        <div class="ContactPhoneNumberWidth">
+                                                            <label for="ContactPhoneNumber">Contact Phone Number: </label>
+                                                        </div>
+
+                                                        <div class="inputFullWith">
+                                                            <input style="font-size: 14px; padding: 5px 0;" class="ContactPhoneNumberInput" type="text" id="ContactPhoneNumber" placeholder="1.855.383.7434/customer.support@everifile.com" name="ContactPhoneNumber" oninput="this.className = ''" required="" />
+                                                        </div>
+                                                    </div>
+
+
+                                                    <!--  <h6>
+                                Contact Phone Number: 1.855.383.7434/<a href="customer.support@everifile.com"><b>customer.support@everifile.com</b></a>
+                              </h6> -->
+                                                </td>
+                                            </tr>
+
+                                            <tr class="tHead">
+                                                <th colspan="2">
+                                                    C. Informed Consent
+                                                </th>
+                                            </tr>
+
+                                            <tr>
+                                                <td colspan="2">
+                                                    <p><b>SEARCH AUTHORIZATION</b> - I HEREBY CONSENT TO THE SEARCH OF the RCMP National Repository of Criminal Records based on the name(s), date of birth and where used, the declared criminal record history
+                                                        provided by myself. I understand that this verification of the National Repository of Criminal Records is not being confirmed by fingerprint comparison which is the only true means by which to confirm
+                                                        if a criminal record exists in the National Repository of Criminal Records.
+                                                    </p>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td colspan="2">
+                                                    <p>
+                                                        <em> POLICE INFORMATION SYSTEM(S)</em> – I HEREBY CONSENT TO THE SEARCH OF police information systems, as part of a Police Information Check, which will consist of a search of the following systems
+                                                        (check applicable):
+                                                    </p>
+                                                    <div class="row">
+                                                        <div class="col-12 col-md-4">
+                                                            ☒ CPIC investigative Data Bank </br>
+                                                            <input style="width: 4%;" id="other" type="checkbox" name="other">
+                                                            <label for="other"> Other</label>
+                                                        </div>
+
+                                                        <div class="col-12 col-md-4">
+                                                            <input style="width: 4%;" id="policeInformation" type="checkbox" name="policeInformation">
+                                                            <label for="policeInformation">Police Information Portal (PIP):</label>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td colspan="2">
+                                                    <p><strong>AUTHORIZATION AND WAIVER</strong> to provide a confirmation of criminal record or any police information.<br/><br/> I certify that the information set out by me in this application is true and
+                                                        correct to the best of my ability. I consent to the release of the results of the criminal record checks to <u>Mintz Global Screening Inc and eVerifile</u> (Company Name), located in <u>Toronto, Canada and eVerifile, Smyrna Georgia, USA</u>                                                        (City and Country). <br/><br/> I hereby release and forever discharge all members and employees of the processing Police Service and the Royal Canadian Mounted Police from any and all actions, claims
+                                                        and demands for damages, loss or injury howsoever arising which may hereafter be sustained by myself as a result of the disclosure of information by the <strong>Cobourg Police Service</strong> to
+                                                        <u>Mintz Global Screening Inc., and eVerifile</u> (Company Name), <u>Toronto, Canada and eVerifile, Smyrna Georgia, USA</u> (City and Country).
+                                                    </p>
+                                                </td>
+                                            </tr>
+
+                                            <tr style="border: 1px solid;">
+                                                <td colspan="2">
+                                                    <div class="row" id="specPrintBtmLine">
+                                                        <div class="col-12 col-md-4">
+                                                            <label for="applicantSignature">Signature of Applicant:</label>
+                                                            <input style="border-bottom: 1px solid;" class="applicantSignatureInput" id="applicantSignature" name="applicantSignature" type="text" oninput="this.className = ''" required="" />
+
+                                                        </div>
+                                                        <div class="col-12 col-md-4">
+                                                            <label for="applicantionDate">Date</label></br>
+                                                            <input style="border-bottom: 1px solid;" class="text-start text-md-center" placeholder="Year – Month - Day" id="applicantionDate" name="applicantionDate" type="text" oninput="this.className = ''" required="" />
+
+                                                        </div>
+                                                        <div class="col-12 col-md-4">
+                                                            <p>Signed at</p>
+                                                            <div class="row">
+                                                                <div class="col-12 col-md-3 col-lg-3">
+                                                                    <input style="border-bottom: 1px solid; width: 100%;" id="singedAtCity" name="singedAtCity" type="text" oninput="this.className = ''" required="" />
+                                                                    <label for="singedAtCity">City</label>
+                                                                </div>
+                                                                <div class="col-12 col-md-9 col-lg-9">
+                                                                    <input style="border-bottom: 1px solid; width: 100%;" id="singedAtProvinceTerritory" name="singedAtProvinceTerritory" type="text" oninput="this.className = ''" required="" />
+                                                                    <label for="singedAtCity">Province/Territory</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr class="tHead">
+                                                <th colspan="2">
+                                                    <div class="row">
+                                                        <div class="col-12 col-md-5">
+                                                            D. Identification Verification
+                                                        </div>
+                                                        <div class="col-md-3">
+                                                            <input style="width: 4%;" type="checkbox" name="physicalVerification" id="physicalVerification">
+                                                            <label style="font-size: 14px; font-weight: 400;" for="physicalVerification"> Physical Identity Verification </label>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <input style="width: 4%;" type="checkbox" name="electricVerification" id="electricVerification">
+                                                            <label style="font-size: 14px; font-weight: 400;" for="electricVerification"> Electronic Identity Verification </label>
+                                                        </div>
+                                                    </div>
+                                                </th>
+                                            </tr>
+
+                                            <tr>
+                                                <td>
+
+                                                    <div class="fixFullWidth">
+                                                        <div class="witnessAgentNameWidth">
+                                                            <label for="witnessAgentName">Witnessing Agent’s Name: </label>
+                                                        </div>
+
+                                                        <div class="inputFullWith">
+                                                            <input id="witnessAgentName" name="witnessAgentName" type="text" oninput="this.className = ''" required="" />
+                                                        </div>
+                                                    </div>
+
+
+                                                </td>
+                                                <td>
+
+                                                    <div class="fixFullWidth">
+                                                        <div class="identificationVerifiedWidth">
+                                                            <label for="identificationVerified">Identification Verified:  </label>
+                                                        </div>
+
+                                                        <div class="inputFullWith">
+                                                            <input class="identificationVerifiedInput" id="identificationVerified" name="identificationVerified" type="text" oninput="this.className = ''" required="" />
+                                                        </div>
+                                                    </div>
+
+
+
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>
+
+                                                    <div class="fixFullWidth">
+                                                        <div class="witnessAgentSignaturedWidth">
+                                                            <label for="witnessAgentSignature">Witnessing Agent’s Signature: </label>
+                                                        </div>
+
+                                                        <div class="inputFullWith">
+                                                            <input class="witnessAgentSignatureInput" id="witnessAgentSignature" name="witnessAgentSignature" type="text" oninput="this.className = ''" required="" />
+                                                        </div>
+                                                    </div>
+
+
+
+                                                </td>
+                                                <td>
+
+                                                    <div class="fixFullWidth alignCenter">
+                                                        <div class="photoIDWidth">
+                                                            <label for="photoID">Type of Photo ID Viewed </br>
+                                                                (Government Issued) & Secondary ID:
+                                                             </label>
+                                                        </div>
+
+                                                        <div class="inputFullWith">
+                                                            <input style="border-bottom: 1px solid; margin-top: 15px;" id="photoID" name="photoID" type="text" oninput="this.className = ''" required="" />
+                                                        </div>
+                                                    </div>
+
+
+
+
+                                                </td>
+                                            </tr>
+                                    </tbody>
+                                </table>
+                                <div class="printMt">
+                                    <div>
+                                        <small>Name and location of the company where information will be stored in Canada: Mintz Global Screening Inc., Montreal, Quebec </small>
+                                    </div>
+                                    <b>**Information related to this criminal record check is collected, retained and disclosed in accordance with applicable privacy legislation. ** </b>
+                                    <small style="text-align: right;">
+                                        Date de version du formulaire: 2017-10-05 Cobourg Police Service
+                                    </small>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section>
+                    <div class="container mt-5">
+                        <div class="row">
+                            <h6 class="text-center text-md-end">CRIMINAL RECORD VERIFICATION<br/> Declaration of Criminal Record Form</h6>
+                            <h4 style="text-align: center;"><strong>Declaration of Criminal Record</strong></h4>
+                            <p><em>This form is required to be filled and attached to your informed Consent Form for a Criminal Record Verification.</em></p>
+                        </div>
+
+                        <div class="row" id="specPrintBtmLine">
+                            <div class="col-12 col-md-5">
+                                <label for="Surname1">Surname (last name)<span>*</span></label>
+                                <input style="border-bottom: 1px solid;" id="Surname1" type="text" name="surname1" oninput="this.className = ''" required="" />
+                            </div>
+
+                            <div class="col-12 col-md-4">
+                                <label for="Givenname1">Given name(s)<span>*</span></label>
+                                <input style="border-bottom: 1px solid;" id="Givenname1" type="text" name="givenname1" oninput="this.className = ''" required="" />
+                            </div>
+
+                            <div class="col-12 col-md-3">
+                                <label class="text-center text-md-start" for="bday">Date of Birth: <span>*</span></label>
+                                <input style="border-bottom: 1px solid; width: 100%;" id="bday" name="bday" type="text" oninput="this.className = ''" required="" />
+                                <p>
+                                    (YYYY-MM-DD)
+                                </p>
+                            </div>
+                        </div>
+
+                        <p>Information is collected and disclosed in accordance with federal, provincial and municipal laws.</p>
+                        <p>A Declaration of Criminal Record does not constitute a Certified Criminal Record by the RCMP and may not contain all criminal record convictions.</p>
+                        <p>Applicants must declare all convictions for offenses under Canadian federal law.</p>
+                        <p><strong><u>Do not declare the following:</u></strong></p>
+                        <ul>
+                            <li> - &nbsp; A conviction for which you have received a Record Suspension (formerly pardon) in accordance with the <em><i>Criminal Records Act</i></em>
+                            </li>
+                            <li> - &nbsp; A conviction where you were a "young person" under the <em><i>Youth Criminal Justice Act</i></em>;</li>
+                            <li> - &nbsp; An Absolute or Conditional Discharge, pursuant to section 730 of the <em><i>Criminal Code</i></em>;</li>
+                            <li> - &nbsp; An offence for which you were not convicted;</li>
+                            <li> - &nbsp; Any provincial or municiple offense, and;</li>
+                            <li> - &nbsp; Any charges dealt with outside of Canada.</li>
+                        </ul>
+                        <p><strong>Note that a Certified Criminal Record can only be issued based on the submission of fingerprints to the RCMP National Repsitory of Criminal Records.</strong></p>
+
+                        <div class="table-responsive">
+                            <table class="table border_dark_table">
+                                <thead class="tHead" style="text-align: center; ">
+                                    <tr>
+                                        <th>
+                                            Offence
+                                        </th>
+                                        <th>
+                                            Date of Sentence
+                                        </th>
+                                        <th>
+                                            Court Location
+                                        </th>
+                                    </tr>
+                                </thead>
+
+                                <tbody style="border-color: #000; ">
+                                    <tr>
+                                        <td>
+                                            <input class="sameWithTable" type="text " name="offence1 " />
+                                        </td>
+                                        <td>
+                                            <input class="sameWithTable" type="text " name="sentence1 " />
+                                        </td>
+                                        <td>
+                                            <input class="sameWithTable" type="text " name="court1 " />
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <input class="sameWithTable" type="text " name="offence2 " />
+                                        </td>
+                                        <td>
+                                            <input class="sameWithTable" type="text " name="sentence2 " />
+                                        </td>
+                                        <td>
+                                            <input class="sameWithTable" type="text " name="court2 " />
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <input class="sameWithTable" type="text " name="offence3 " />
+                                        </td>
+                                        <td>
+                                            <input class="sameWithTable" type="text " name="sentence3 " />
+                                        </td>
+                                        <td>
+                                            <input class="sameWithTable" type="text " name="court3 " />
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <input class="sameWithTable" type="text " name="offence4 " />
+                                        </td>
+                                        <td>
+                                            <input class="sameWithTable" type="text " name="sentence4 " />
+                                        </td>
+                                        <td>
+                                            <input class="sameWithTable" type="text " name="court4 " />
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <input class="sameWithTable" type="text " name="offence5 " />
+                                        </td>
+                                        <td>
+                                            <input class="sameWithTable" type="text " name="sentence5 " />
+                                        </td>
+                                        <td>
+                                            <input class="sameWithTable" type="text " name="court5 " />
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <input class="sameWithTable" type="text " name="offence6 " />
+                                        </td>
+                                        <td>
+                                            <input class="sameWithTable" type="text " name="sentence6 " />
+                                        </td>
+                                        <td>
+                                            <input class="sameWithTable" type="text " name="court6 " />
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <input class="sameWithTable" type="text " name="offence7 " />
+                                        </td>
+                                        <td>
+                                            <input class="sameWithTable" type="text " name="sentence7 " />
+                                        </td>
+                                        <td>
+                                            <input class="sameWithTable" type="text " name="court7 " />
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <input class="sameWithTable" type="text " name="offence8 " />
+                                        </td>
+                                        <td>
+                                            <input class="sameWithTable" type="text " name="sentence8 " />
+                                        </td>
+                                        <td>
+                                            <input class="sameWithTable" type="text " name="court8 " />
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="row mt-5 " id="specPrintBtmLine">
+                            <div class="col-12 col-md-8 ">
+                                <input style="border-bottom: 1px solid; width: 60%; " id="signature2 " type="text " name="signature2 " oninput="this.className='' " required=" " /></br>
+                                <label style="text-align: center; " for="signature2 ">Signature of applicant:<span>*</span></label>
+                            </div>
+
+                            <div class="col-12 col-md-4 ">
+                                <input style="border-bottom: 1px solid; width: 50%; " id="date2 " name="date2 " type="text " oninput="this.className='' " required=" " /></br>
+                                <label for="date2 ">Date (YYYY-MM-DD)</label>
+                            </div>
+                        </div>
+
+                        <div class="container">
+                            <div class="row mt-3 " id="specPrintBtmLine">
+                                <p>
+                                    Verififed by:
+                                </p>
+                                <input style="border-bottom: 1px solid; width: 40%;" id="NameOfPolice " name="NameOfPolice " type="text ">
+                                <label for="NameOfPolice ">Name of Police Agency Employee</label>
+                                <input style="border-bottom: 1px solid; width: 40%;" id="signatureOfPolice " name="signatureOfPolice " type="text ">
+                                <label for="signatureOfPolice ">Signature of Police Agency Employee</label>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section>
+                    <div class="container mt-5 pt-2 ">
+                        <div class="row ">
+                            <div class="col-12 col-md-4 text-center text-md-start mb-2 mb-md-0 ">
+                                <img src="../../assets/img/logo-mintz.jpg" width="140px " height="60px " alt="logo ">
+                            </div>
+
+                            <div class="col-12 col-md-8 text-center text-md-end ">
+                                <h6><strong>PROVINCIAL CRIMINAL RECORD VERIFICATION</strong><br/> Informed Consent Form</h6>
+                            </div>
+                        </div>
+
+                        <div class="row mt-4 ">
+                            <div class="col-12 col-md-6 text-center text-md-start mb-2 mb-md-0 ">
+                                <label for="LastName ">Last Name<span>*</span></label>
+                                <input style="border: 1px solid; width: 80%; " id="LastName " type="text " name="LastName " oninput="this.className='' " required=" " />
+                            </div>
+                            <div class="col-12 col-md-6 text-center text-md-start ">
+                                <label for="FirstName ">First Name<span>*</span></label>
+                                <input style="border: 1px solid; width: 80%; " id="FirstName " type="text " name="FirstName " oninput="this.className='' " required=" " />
+                            </div>
+                        </div>
+
+                        <div class="mt-5 ">
+                            <hr/>
+                            <p><strong>CONSENT TO DISCLOSURE</strong></p>
+                            <p>I hereby give authorization to Mintz Global Screening ("Mintz "), acting on behalf of eVerifile ("the Company "), to obtain the following information</p>
+                            <ul>
+                                <li>to obtain information about myself and actions I am or have been involved in from any provincial or federal judicial court, tribunal, regulatory body, disciplinary committee or any other legal or quasi-legal authority in
+                                    Canada.
+                                </li>
+                            </ul>
+                            <hr/>
+                            <p><strong>RELEASE AND DISCHARGE</strong><br/>
+                                <u>Purpose of Consent: Background Screening</u>
+                            </p>
+                            <p>I understand that the information obtained as a result of this authorization will be held in the strictest of confidentiality by Mintz and/or the Company and will be maintained in accordance with their respective Privacy Policies.
+                                The Information obtained will only be used in accordance with and to satisfy the scope for which this authorization has been signed. I release, waive and forever discharge anyone who provides information in relation to
+                                this release, from any and all liability for the disclosure of information to Mintz or the Company. I certify that the information set out by me in this authorization is correct. Before signing this authorization, I have
+                                fully informed myself of its content and meaning and have a full understanding of it.</p>
+
+                        </div>
+
+                        <div class="container ">
+                            <div style="border-bottom: 1px solid; " class="row " id="specPrintBtmLine">
+                                <div class="col-6 ">
+                                    <b><label for="signature3 ">Signature</label></b>
+                                    <input class="signature3Input" id="signature3 " type="text " name="signature3 " oninput="this.className='' " required=" " />
+                                </div>
+
+                                <div class="col-6 ">
+                                    <b><label for="date3 ">Date </label></b>
+                                    <input class="date3Input" id="date3 " type="text " name="date3 " oninput="this.className='' " required=" " />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="mt-5 ">
+                    <div class="container ">
+                        <p><strong>IDENTITY VERIFICATION</strong></p>
+                        <p>All applicants for a criminal record check must provide government-issued identification prior to undergoing a name-based criminal record check. Legible copies of the identification must be included with the authorization form.</p>
+                        <p>An applicant must provide copies of <u>two (2) pieces of valid identification</u>, one of which must be government-issued and include the applicant's name, date of birth, signature and photo of the applicant. Copies of the identification
+                            documents must be certified by a witness who will confirm that the applicant signing the informed consent is the individual on the government-issued identification. The witness verifying the identity of the applicant must compare
+                            the signature on the government-issued identification to the signature on the Informed Consent Form.</p>
+                        <div class="row ">
+                            <div class="col-12 col-md-6 ">
+                                <p><strong>PHOTO IDENTIFICATION STANDARDS</strong><br/> One of the provided pieces of identification must be one of the following:</p>
+                                <ul>
+                                    <li>Driver's Licence (issued by Canadian province or territory) or Nexus Card</li>
+                                    <li>Foreign Driver's Licence</li>
+                                    <li>Photo Health Card (except in Ontario, Manitoba or Prince Edward Island)</li>
+                                    <li>Canadian Passport</li>
+                                    <li>Foreign Passport</li>
+                                    <li>Canadian Citizenship Card</li>
+                                    <li>Permanent Resident (PR) Card</li>
+                                    <li>Certificate of Indian Status</li>
+                                    <li>Firearms Acquisition Certificate (FAC)</li>
+                                    <li>Federal, Provincial or Municipal Identification Card</li>
+                                    <li>Military Family Identification Card (MFID)</li>
+                                </ul>
+                            </div>
+
+                            <div class="col-12 col-md-6 ">
+                                <p><strong>SECONDARY IDENTIFICATION STANDARDS</strong><br/> The second piece of ID can be another photo ID from the previous list or can be any of the following:</p>
+                                <ul>
+                                    <li>Birth Certificate</li>
+                                    <li>Baptismal Certificate</li>
+                                    <li>Hunting Licence</li>
+                                    <li>Fishing Licence</li>
+                                    <li>Outdoors Card</li>
+                                    <li>Hospital Card</li>
+                                    <li>Immigration Papers</li>
+                                    <li>Canadian Blood Donor Card (only if date of birth indicated)</li>
+                                    <li>Student Identity Card (as long as name is shown)</li>
+                                </ul>
+                            </div>
+                        </div>
+
+
+                        <p class="mt-5 "><strong>WITNESS REQUIREMENTS</strong><br/> The witness must personally view the identification provided and ensure that it matches the person signing this form. The witness may be contacted as part of an audit of this process to
+                            verify that this occurred.</p>
+                        <p>The witness must be one of the following:</p>
+                        <ul>
+                            <li>An employee of the company for which this background screening is being completed or;</li>
+                            <li>A duly authorized and licensed notary public or;</li>
+                            <li>An independant arms length witness. This is defined as a person who is not related by marriage or blood to the candidate or otherwise in an intimate relationship. The witness must be at least 18 years of age and have known
+                                the candidate personally for a minimum of 2 years. To know an applicant personally means that the witness is able to confirm aspects of the applicant's personal attributes such as name, approximate age, place of birth,
+                                physical description and some personal history.</li>
+                        </ul><br/><br/>
+                        <p><strong><u>Note to applicant:</u></strong> You may make a request for access to your personal information, a request for correction or any other request for information by sending a written request to Mintz (Mintz Global Screening
+                            1303 William Street, Suite 200, Montreal, QC, H3C 1R4 to the attention of Privacy Officer. Mintz will answer your request for access, correction or information within thirty (30) days following its reception.</p>
+                    </div>
+                </section>
+
+
+                <section>
+                    <div class="container mt-5 ">
+                        <p><strong>INSTRUCTIONS -DECLARATION OF CRIMINAL RECORD</strong></p>
+                        <p>Prior to undergoing a name-based criminal record verification, you can self declare the content of your criminal record using the Declaration of a Criminal Record form available on the next page. The police will compare the data
+                            provided against their database and determine either the declaration is:</p>
+                        <ul>
+                            <li><strong>Complete:</strong> there are no other criminal record convictions than the ones declared and the information provided is accurate or your declaration is considered by the police service a material representation of
+                                your criminal history.</li>
+                            <li><strong>Incomplete:</strong> the information provided is inaccurate or it is not a complete listing of the applicant's criminal record.</li>
+                        </ul>
+                        <p>The confirmation of a declaration of a criminal record does not constitute a Certified Criminal Record by the RCMP-GRC. A Certified Criminal Record can be only issued based on the submission of fingerprints to the RCMP National
+                            Repository of Criminal Records. Also note that the confirmation of a declaration of a criminal record may not contain all criminal record convictions.</p>
+                        <p><strong>DECLARATION PROCESS</strong></p>
+                        <ol>
+                            <li>Using the form provided on the next page, enter your name and date of birth exactly as they appear on your background screening consent form.</li>
+                            <li>Enter the criminal charge per line. If you were convicted for several counts at the same time, please use one line per count.</li>
+                            <li>Identify the offence, date of conviction, and court location where the judgement was rendered.</li>
+                        </ol>
+                        <p><strong>DECLARE THE FOLLOWING INFORMATION:</strong></p>
+                        <ul>
+                            <li>All convictions for criminal offenses under ferderal law.</li>
+                        </ul>
+                        <p><strong>DO NOT DECLARE THE FOLLOWING:</strong></p>
+                        <ul>
+                            <li> Absolute discharges or conditional discharges, pursuant to the Criminal Code, section 730.</li>
+                            <li> Any charges for which you have received a record suspension ("pardon "), pursuant to the Criminal Records Act.</li>
+                            <li> Any offences while you were a "young person " (twelve years old but less than eighteen years old), pursuant to the Youth Criminal Justice Act.</li>
+                            <li> Any charges for which you were not convicted, for example, charges that were withdrawn, dismissed, etc.</li>
+                            <li> Any provincial or municipal offenses, for example traffic infractions.</li>
+                            <li> Any charges dealt with outside of Canada.</li>
+                            <li> Any charges for which you received a stay of proceedings.</li>
+                        </ul>
+                    </div>
+                </section>
+
+
+
+
+            </div>
+        </div>
+
+
+        <!-- Circles which indicates the steps of the form: -->
+        <div style="text-align:center;margin:40px auto;" id="lastDiv">
+            <button type="button" id="prevBtn" onclick="nextPrev(-1)">&lt Previous</button>
+            <span class="step"></span>
+            <span class="step"></span>
+            <span class="step"></span>
+            <button type="submit" id="nextBtn" onclick="nextPrev(1)" style="width:auto;">Next</button>
+        </div>
+
+
+
+    </form>
+
+
+
+
+
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js " integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM " crossorigin="anonymous "></script>
+    <!--Custom Js code-->
+    <script>
+        var currentTab = 0; // Current tab is set to be the first tab (0)
+        showTab(currentTab); // Display the current tab
+
+        function showTab(n) {
+            // This function will display the specified tab of the form...
+            var x = document.getElementsByClassName("tab");
+            x[n].style.display = "block";
+            //... and fix the Previous/Next buttons:
+            if (n == 0) {
+                document.getElementById("prevBtn").style.display = "none";
+            } else {
+                document.getElementById("prevBtn").style.display = "inline";
+            }
+            if (n == (x.length - 1)) {
+                document.getElementById("nextBtn").innerHTML = "Submit";
+            } else {
+                document.getElementById("nextBtn").innerHTML = "Next &gt";
+            }
+            //... and run a function that will display the correct step indicator:
+            fixStepIndicator(n)
+        }
+
+
+        function nextPrev(n) {
+            // This function will figure out which tab to display
+            var x = document.getElementsByClassName("tab");
+            // Exit the function if any field in the current tab is invalid:
+            var formData = validateForm();
+            if (n == 1 && !formData) return false;
+
+            if (n == 1) {
+                formData.append('step', currentTab);
+
+                $.ajax({
+                    url: 'form1save.php',
+                    data: formData,
+                    type: 'POST',
+                    contentType: false, // NEEDED, DON'T OMIT THIS (requires jQuery 1.6+)
+                    processData: false, // NEEDED, DON'T OMIT THIS
+                    success: function() {
+
+                        beforeShowTab(n, x);
+
+                    },
+                    error: function() {
+                        alert('Error: could not save the form, please try again.');
+                    }
+                });
+            } else {
+                beforeShowTab(n, x);
+            }
+
+        }
+
+        function beforeShowTab(n, x) {
+            // mark the step as finished and valid:
+            document.getElementsByClassName("step")[currentTab].className += " finish";
+            // Hide the current tab:
+            x[currentTab].style.display = "none";
+            // Increase or decrease the current tab by 1:
+            currentTab = currentTab + n;
+            //   // if you have reached the end of the form...
+            if (currentTab >= x.length) {
+                alert('Form successfully submitted');
+                window.location.href = "/cbs-forms/";
+                return false;
+            }
+            // Otherwise, display the correct tab:
+            showTab(currentTab);
+        }
+
+        function validateForm() {
+            // This function deals with validation of the form fields
+            var x, y, i, valid = true;
+            x = document.getElementsByClassName("tab");
+            y = x[currentTab].getElementsByTagName("input");
+            // A loop that checks every input field in the current tab:
+            var formData = new FormData();
+            for (i = 0; i < y.length; i++) {
+
+                if (y[i].type != "file") {
+                    if (y[i].value == "") {
+                        y[i].className += " invalid";
+                        valid = false;
+                    }
+                    if (y[i].type == "radio") {
+                        if (!formData.has(y[i].name)) {
+                            formData.append(y[i].name, $(x[currentTab]).find("input[name=" + y[i].name + "]:checked").val());
+                        }
+                    } else {
+                        formData.append(y[i].name, y[i].value);
+                    }
+                } else {
+                    if (!y[i].classList.contains('hideFile')) {
+                        if (y[i].value == "") {
+                            y[i].className += " invalid";
+                            valid = false;
+                        } else {
+                            formData.append(y[i].name, y[i].files[0], y[i].files[0].name);
+                        }
+                    }
+                }
+            }
+
+            return valid ? formData : null; // return the data if valid
+        }
+
+        function fixStepIndicator(n) {
+            // This function removes the "active" class of all steps...
+            var i, x = document.getElementsByClassName("step");
+            for (i = 0; i < x.length; i++) {
+                x[i].className = x[i].className.replace(" active", "");
+            }
+            //... and adds the "active" class on the current step:
+            x[n].className += " active";
+        }
+
+        function changeImg(name) {
+            var inp = $('input[name="' + name + '"]');
+            inp.eq(0).removeClass('hideFile');
+
+        }
+
+        function setData(data) {
+            for (let key of Object.keys(data)) {
+                var inp = $('input[name="' + key + '"]');
+                if (inp.length > 0) {
+                    var inpType = inp.eq(0).attr('type');
+                    switch (inpType) {
+                        case "radio":
+                            $("input[name='" + key + "'][value=" + data[key] + "]").prop('checked', true);
+                            break;
+                        case "file":
+                            inp.eq(0).addClass('hideFile');
+                            inp.eq(0).next().children('img').eq(0).prop('src', '../uploads/form1/' + data[key]);
+                            break;
+                        default:
+                            inp.val(data[key]);
+                            break;
+                    }
+
+                }
+            }
+        }
+    </script>
+
+</body>
+
+</html>

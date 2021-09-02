@@ -1,0 +1,645 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+    color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+    font-size: 12.4px;
+}
+
+* {
+    overflow-x: hidden;
+}
+
+.table_class {
+    padding: 3px 10px;
+}
+
+.shortSex {
+    display: none;
+}
+
+#firstTableDiv .table> :not(caption)>*>* {
+    padding-top: 0rem;
+    background-color: var(--bs-table-bg);
+    border-bottom-width: 1px;
+    box-shadow: inset 0 0 0 9999px var(--bs-table-accent-bg);
+    padding: 2px 10px;
+    padding-bottom: 2px;
+    padding-bottom: 0px;
+}
+
+.tHead,
+.custom_tr {
+    background-color: #bfbfbf;
+    color: rgb(53, 50, 50);
+    font-size: 15px;
+    padding: 4px 8px;
+}
+
+.custom_tr {
+    font-weight: bold;
+    text-align: center;
+}
+
+.custom_table>input {
+    padding: 4px 7px;
+}
+
+@media (min-width: 1200px) {
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl {
+        max-width: 1270px;
+    }
+}
+
+.main-logo {
+    width: 190px;
+    height: 120px;
+}
+
+@media (max-width: 500px) {
+    .main-logo {
+        width: 160px;
+        height: 90px;
+    }
+}
+
+.btn-language button,
+#nextBtn {
+    border: none;
+    outline: none;
+    background-color: #125f8f;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 10px;
+}
+
+@media (max-width: 500px) {
+    .btn-language button {
+        padding: 5px 8px;
+    }
+}
+
+.btn-language button:hover {
+    background-color: #1c8ace;
+}
+
+#nextBtn:hover {
+    background-color: #1c8ace;
+}
+
+.invalid {
+    background-color: #ffdddd;
+}
+
+.thead {
+    background-color: rgb(145, 145, 145);
+    color: rgb(0, 0, 0)";
+
+}
+
+#testDiv {
+    background-color: #212529;
+    text-align: center;
+    color: red;
+    max-width: 1200px;
+    margin: 0px auto;
+}
+
+
+/* Make circles that indicate the steps of the form: */
+
+.step {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbbbbb;
+    border: none;
+    border-radius: 50%;
+    display: inline-block;
+    opacity: 0.5;
+}
+
+.step.active {
+    opacity: 1;
+}
+
+#prevBtn {
+    background-color: #bbbbbb;
+}
+
+#prevBtn:hover {
+    background: #4286f4;
+}
+
+
+/* Mark the steps that are finished and valid: */
+
+.step.finish {
+    background-color: #4286f4;
+}
+
+table,
+td {
+    border: 1px solid;
+    padding: 0;
+    margin: 0;
+}
+
+.border-dark {
+    border-color: #212529 !important;
+}
+
+.printFont {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+@media (max-width: 768px) {
+    .table-style thead,
+    .table-style tbody,
+    .table-style th,
+    .table-style tr,
+    .table-style td {
+        border-top: 0.5 px solid;
+        border-bottom: none;
+        border-left: none;
+        border-right: none;
+    }
+}
+
+.input-field-align {
+    display: flex;
+    flex-direction: row;
+}
+
+.border_dark_table {
+    border-color: black;
+}
+
+.listStyle {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+/* ------------------------------ */
+
+
+/* input {
+    border: none;
+    outline: none;
+} */
+
+
+/*------------------------ Input FULL width -----------------------------------------*/
+
+.fixFullWidth {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@media (max-width: 992px) {
+    .fixFullWidth {
+        display: flex;
+        flex-direction: column;
+    }
+    .inputFullWith {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+input {
+    width: 100%;
+}
+
+.inputFullWith {
+    width: 100%;
+}
+
+.surNameWidth {
+    width: 150px;
+}
+
+@media (max-width: 1230px) {
+    .surNameWidth {
+        width: 60%;
+    }
+}
+
+@media (max-width: 1206px) {
+    .surNameWidth {
+        width: 78%;
+    }
+}
+
+.givenNameWidth {
+    width: 110px;
+}
+
+@media (max-width: 1250px) {
+    .givenNameWidth {
+        width: 32%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .givenNameWidth {
+        width: 46%;
+    }
+}
+
+.birthNameWidth {
+    width: 220px;
+}
+
+@media (max-width: 1266px) {
+    .birthNameWidth {
+        width: 100%;
+    }
+}
+
+.formerNameWidth {
+    width: 115px;
+}
+
+@media (max-width: 1200px) {
+    .formerNameWidth {
+        width: 47%;
+    }
+}
+
+.placeBirthWidth {
+    width: 230px;
+}
+
+@media (max-width: 1274px) {
+    .placeBirthWidth {
+        width: 37%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .placeBirthWidth {
+        width: 52%;
+    }
+}
+
+.dobWith {
+    width: 215px;
+}
+
+@media (max-width: 1265px) {
+    .dobWith {
+        width: 100%;
+    }
+}
+
+.phoneWith {
+    width: 120px;
+}
+
+@media (max-width: 1250px) {
+    .phoneWith {
+        width: 45%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .phoneWith {
+        width: 65%;
+    }
+}
+
+.emailWith {
+    width: 100px;
+}
+
+@media (max-width: 1230px) {
+    .emailWith {
+        width: 29%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .emailWith {
+        width: 42%;
+    }
+}
+
+.jobTitleWith {
+    width: 540px;
+}
+
+@media (max-width: 1234px) {
+    .jobTitleWith {
+        width: 104%;
+    }
+}
+
+@media (max-width: 1216px) {
+    .jobTitleWith {
+        width: 111%;
+    }
+}
+
+@media (max-width: 1216px) {
+    .jobTitleWith {
+        width: 203%;
+    }
+}
+
+.eVerifileWith {
+    width: 215px;
+}
+
+@media (max-width: 1236px) {
+    .eVerifileWith {
+        width: 34%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .eVerifileWith {
+        width: 48%;
+    }
+}
+
+.contactNumberWidth {
+    width: 100px;
+}
+
+@media (max-width: 1240px) {
+    .contactNumberWidth {
+        width: 33%;
+    }
+}
+
+@media (max-width: 1220px) {
+    .contactNumberWidth {
+        width: 37%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .contactNumberWidth {
+        width: 50%;
+    }
+}
+
+.ContactPhoneNumberWidth {
+    width: 185px;
+}
+
+@media (max-width: 1208px) {
+    .ContactPhoneNumberWidth {
+        width: 66%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .ContactPhoneNumberWidth {
+        width: 87%;
+    }
+}
+
+.witnessAgentNameWidth {
+    width: 190px;
+}
+
+@media (max-width: 1235px) {
+    .witnessAgentNameWidth {
+        width: 80%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .witnessAgentNameWidth {
+        width: 135%;
+    }
+}
+
+.identificationVerifiedWidth {
+    width: 160px;
+}
+
+@media (max-width: 1266px) {
+    .identificationVerifiedWidth {
+        width: 48%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .identificationVerifiedWidth {
+        width: 71%;
+    }
+}
+
+.witnessAgentSignaturedWidth {
+    width: 225px;
+}
+
+@media (max-width: 1260px) {
+    .witnessAgentSignaturedWidth {
+        width: 95%;
+    }
+}
+
+@media (max-width: 1230px) {
+    .witnessAgentSignaturedWidth {
+        width: 100%;
+    }
+}
+
+.alignCenter {
+    justify-content: bottom;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+@media (max-width: 1200px) {
+    .alignCenter {
+        flex-direction: column;
+        justify-content: start;
+        text-align: left;
+    }
+}
+
+.photoIDWidth {
+    width: 58%;
+}
+
+@media (max-width: 1260px) {
+    .photoIDWidth {
+        width: 120%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .photoIDWidth {
+        width: 90%;
+        margin-left: 0px;
+    }
+}
+
+.sameWithTable {
+    width: 100%;
+}
+
+.fixInputWidth {
+    width: 30%;
+}
+
+.table {
+    border: 2px solid black;
+}
+
+@media screen and (max-width: 1050px) {
+    input {
+        border-bottom: 1px solid black!important;
+    }
+}
+
+@media (max-width: 992px) {
+    .fixInputWidth {
+        width: 52%;
+    }
+    .printFont {
+        font-size: 10px;
+        font-weight: 400;
+    }
+}
+
+@media (max-width: 768px) {
+    .fixInputWidth {
+        width: 55%;
+    }
+    .jobTitleWith {
+        width: auto;
+    }
+}
+
+@media (max-width: 530px) {
+    .fixInputWidth {
+        width: 80%;
+    }
+    .cstmBottom {
+        margin-top: 80px;
+    }
+}
+
+@media (max-width: 600px) {
+    .custom_table input {
+        border-bottom: 0px solid rgb(2, 2, 2)!important;
+    }
+    .shortSex {
+        display: block;
+    }
+}
+
+
+/*-----------------------------------------------------------------*/
+
+input {
+    outline: none;
+    border: none;
+}
+
+@media print {
+    body {
+        -webkit-print-color-adjust: exact !important;
+        -moz-print-color-adjust: exact !important;
+    }
+    table {
+        border: 2px solid black;
+    }
+    table,
+    td {
+        border: 2px solid black;
+    }
+    #specPrintBtmLine input {
+        border-bottom-color: black;
+        border-bottom: 2px solid black!important;
+    }
+    /* .printMt {
+        margin-top: 200px;
+    } */
+    #header,
+    #lastDiv {
+        display: none;
+    }
+    .printSpace {
+        margin-top: 100px;
+    }
+    .printCol1 {
+        width: 8%;
+    }
+    .printCol2 {
+        width: 16%;
+    }
+    .printCol3 {
+        width: 24%;
+    }
+    .printCol4 {
+        width: 32%;
+    }
+    .printCol5 {
+        width: 40%;
+    }
+    .printCol6 {
+        width: 48%;
+    }
+    .printCol8 {
+        width: 64%;
+    }
+    .printCol9 {
+        width: 72%;
+    }
+    .printFlexClose,
+    .printRmvWrap {
+        flex-wrap: unset;
+    }
+    .printLeft {
+        text-align: left !important;
+        font-size: 10px;
+    }
+    .printRight {
+        text-align: right!important;
+    }
+    .fixFullWidth {
+        display: flex;
+        flex-direction: row;
+    }
+    #physicalVerification {
+        width: 4%;
+    }
+    .shortSex {
+        display: none;
+    }
+    .printFont {
+        font-size: 10px;
+    }
+    .birthNameWidth,
+    .placeBirthWidth,
+    .dobWith,
+    .jobTitleWith,
+    .contactNumberWidth {
+        font-size: 10px;
+    }
+    .jobTitleWith {
+        width: 600px;
+    }
+    .witnessAgentSignaturedWidth {
+        width: 300px;
+    }
+}

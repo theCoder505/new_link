@@ -1,0 +1,551 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+    color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+}
+
+* {
+    overflow-x: hidden;
+}
+
+.tHead {
+    background-color: rgb(145, 145, 145);
+    color: rgb(0, 0, 0);
+}
+
+@media (min-width: 1200px) {
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl {
+        max-width: 1270px;
+    }
+}
+
+.main-logo {
+    width: 190px;
+    height: 120px;
+}
+
+@media (max-width: 500px) {
+    .main-logo {
+        width: 160px;
+        height: 90px;
+    }
+}
+
+.btn-language button,
+#nextBtn {
+    border: none;
+    outline: none;
+    background-color: #125f8f;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 10px;
+}
+
+@media (max-width: 500px) {
+    .btn-language button {
+        padding: 5px 8px;
+    }
+}
+
+.btn-language button:hover {
+    background-color: #1c8ace;
+}
+
+#nextBtn:hover {
+    background-color: #1c8ace;
+}
+
+.invalid {
+    background-color: #ffdddd;
+}
+
+.thead {
+    background-color: rgb(145, 145, 145);
+    color: rgb(0, 0, 0)";
+
+}
+
+#testDiv {
+    background-color: #212529;
+    text-align: center;
+    color: red;
+    max-width: 1200px;
+    margin: 0px auto;
+}
+
+
+/* Make circles that indicate the steps of the form: */
+
+.step {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbbbbb;
+    border: none;
+    border-radius: 50%;
+    display: inline-block;
+    opacity: 0.5;
+}
+
+.step.active {
+    opacity: 1;
+}
+
+#prevBtn {
+    background-color: #bbbbbb;
+}
+
+#prevBtn:hover {
+    background: #4286f4;
+}
+
+
+/* Mark the steps that are finished and valid: */
+
+.step.finish {
+    background-color: #4286f4;
+}
+
+table,
+td {
+    border: 1px solid;
+    padding: 0;
+    margin: 0;
+}
+
+.border-dark {
+    border-color: #212529 !important;
+}
+
+@media (max-width: 768px) {
+    .table-style thead,
+    .table-style tbody .table-style thead th,
+    .table-style tr,
+    .table-style td {
+        display: block;
+        width: 100% !important;
+    }
+    .table-style thead,
+    .table-style tbody,
+    .table-style th,
+    .table-style tr,
+    .table-style td {
+        border-top: 0.5 px solid;
+        border-bottom: none;
+        border-left: none;
+        border-right: none;
+    }
+}
+
+.input-field-align {
+    display: flex;
+    flex-direction: row;
+}
+
+.border_dark_table {
+    border-color: black;
+}
+
+
+/* ------------------------------ */
+
+
+/* input {
+    border: none;
+    outline: none;
+} */
+
+
+/*------------------------ Input FULL width -----------------------------------------*/
+
+.fixFullWidth {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@media (max-width: 992px) {
+    .fixFullWidth {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+input {
+    width: 100%;
+}
+
+.inputFullWith {
+    width: 100%;
+}
+
+.surNameWidth {
+    width: 220px;
+}
+
+@media (max-width: 1230px) {
+    .surNameWidth {
+        width: 60%;
+    }
+}
+
+@media (max-width: 1206px) {
+    .surNameWidth {
+        width: 78%;
+    }
+}
+
+.givenNameWidth {
+    width: 150px;
+}
+
+@media (max-width: 1250px) {
+    .givenNameWidth {
+        width: 32%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .givenNameWidth {
+        width: 46%;
+    }
+}
+
+.birthNameWidth {
+    width: 320px;
+}
+
+@media (max-width: 1266px) {
+    .birthNameWidth {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .birthNameWidth {
+        width: 176%;
+    }
+}
+
+.formerNameWidth {
+    width: 170px;
+}
+
+@media (max-width: 1200px) {
+    .formerNameWidth {
+        width: 47%;
+    }
+}
+
+.placeBirthWidth {
+    width: 315px;
+}
+
+@media (max-width: 1274px) {
+    .placeBirthWidth {
+        width: 37%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .placeBirthWidth {
+        width: 52%;
+    }
+}
+
+.dobWith {
+    width: 305px;
+}
+
+@media (max-width: 1265px) {
+    .dobWith {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .dobWith {
+        width: 170%;
+    }
+}
+
+.phoneWith {
+    width: 160px;
+}
+
+@media (max-width: 1250px) {
+    .phoneWith {
+        width: 45%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .phoneWith {
+        width: 65%;
+    }
+}
+
+.emailWith {
+    width: 27%;
+}
+
+@media (max-width: 1230px) {
+    .emailWith {
+        width: 29%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .emailWith {
+        width: 42%;
+    }
+}
+
+.jobTitleWith {
+    width: 800px;
+}
+
+@media (max-width: 1234px) {
+    .jobTitleWith {
+        width: 104%;
+    }
+}
+
+@media (max-width: 1216px) {
+    .jobTitleWith {
+        width: 111%;
+    }
+}
+
+@media (max-width: 1216px) {
+    .jobTitleWith {
+        width: 203%;
+    }
+}
+
+.eVerifileWith {
+    width: 290px;
+}
+
+@media (max-width: 1236px) {
+    .eVerifileWith {
+        width: 34%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .eVerifileWith {
+        width: 48%;
+    }
+}
+
+.contactNumberWidth {
+    width: 135px;
+}
+
+@media (max-width: 1240px) {
+    .contactNumberWidth {
+        width: 33%;
+    }
+}
+
+@media (max-width: 1220px) {
+    .contactNumberWidth {
+        width: 37%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .contactNumberWidth {
+        width: 50%;
+    }
+}
+
+.ContactPhoneNumberWidth {
+    width: 255px;
+}
+
+@media (max-width: 1208px) {
+    .ContactPhoneNumberWidth {
+        width: 66%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .ContactPhoneNumberWidth {
+        width: 87%;
+    }
+}
+
+.witnessAgentNameWidth {
+    width: 275px;
+}
+
+@media (max-width: 1235px) {
+    .witnessAgentNameWidth {
+        width: 80%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .witnessAgentNameWidth {
+        width: 135%;
+    }
+}
+
+.identificationVerifiedWidth {
+    width: 220px;
+}
+
+@media (max-width: 1266px) {
+    .identificationVerifiedWidth {
+        width: 48%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .identificationVerifiedWidth {
+        width: 71%;
+    }
+}
+
+.witnessAgentSignaturedWidth {
+    width: 325px;
+}
+
+@media (max-width: 1260px) {
+    .witnessAgentSignaturedWidth {
+        width: 95%;
+    }
+}
+
+@media (max-width: 1230px) {
+    .witnessAgentSignaturedWidth {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .witnessAgentSignaturedWidth {
+        width: 180%;
+    }
+}
+
+.alignCenter {
+    justify-content: bottom;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+@media (max-width: 1200px) {
+    .alignCenter {
+        flex-direction: column;
+        justify-content: start;
+        text-align: left;
+    }
+}
+
+.photoIDWidth {
+    width: 95%;
+}
+
+@media (max-width: 1260px) {
+    .photoIDWidth {
+        width: 120%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .photoIDWidth {
+        width: 90%;
+        margin-left: -40px;
+    }
+}
+
+.sameWithTable {
+    width: 100%;
+}
+
+.fixInputWidth {
+    width: 30%;
+}
+
+.table {
+    border: 2px solid black;
+}
+
+@media screen and (max-width: 1050px) {
+    input {
+        border-bottom: 1px solid black!important;
+    }
+}
+
+@media (max-width: 992px) {
+    .fixInputWidth {
+        width: 52%;
+    }
+}
+
+@media (max-width: 768px) {
+    .fixInputWidth {
+        width: 55%;
+    }
+    .jobTitleWith {
+        width: auto;
+    }
+}
+
+@media (max-width: 530px) {
+    .fixInputWidth {
+        width: 80%;
+    }
+    .cstmBottom {
+        margin-top: 80px;
+    }
+}
+
+
+/*-----------------------------------------------------------------*/
+
+input {
+    outline: none;
+    border: none;
+}
+
+@media print {
+    body {
+        -webkit-print-color-adjust: exact !important;
+        -moz-print-color-adjust: exact !important;
+    }
+    table {
+        border: 2px solid black;
+    }
+    table,
+    td {
+        border: 2px solid black;
+    }
+    #specPrintBtmLine input {
+        border-bottom-color: black;
+        border-bottom: 2px solid black!important;
+    }
+    .printMt {
+        margin-top: 200px;
+    }
+    #header,
+    #lastDiv {
+        display: none;
+    }
+    .printSpace {
+        margin-top: 100px;
+    }
+}
